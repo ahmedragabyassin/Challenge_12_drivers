@@ -39,45 +39,45 @@ int main(void)
 	DIO_SetPinDirection(SEGMENT_C,OUT);
 	DIO_SetPinDirection(SEGMENT_D,OUT);
 	KeyPad_Init();
-	uint8 pressed_key=0;
+	uint8 pressed_key=NUM_0;
 	#endif
 
-    while (1) 
+    while (NUM_1) 
     {
 		/************************************************************************/
 		/* Test Seven Segment and Keypad Drivers                                */
 		/************************************************************************/
-		#if 0
+		#if STOP_CODE
 		KeyPad_Init();
 		BCDSevSegment_Enable(SEG1_EN);
-		pressed_key = Scan_KeyPad();
+		pressed_key = KeyPad_GetPressedKey();
 		BCDSevSegment_DisplayNo(pressed_key);
 		BCDSevSegment_Disable(SEG1_EN);
 		/BCDSevSegment_Disable(SEG2_EN);
 		BCDSevSegment_Disable(SEG3_EN);
 		BCDSevSegment_Disable(SEG4_EN);
-		_delay_us(5);
+		_delay_us(FIVE_MS);
 		BCDSevSegment_Enable(SEG2_EN);
-		BCDSevSegment_DisplayNo(9);
+		BCDSevSegment_DisplayNo(NUM_9);
 		BCDSevSegment_Disable(SEG1_EN);
 		BCDSevSegment_Disable(SEG2_EN);
 		BCDSevSegment_Disable(SEG3_EN);
 		BCDSevSegment_Disable(SEG4_EN);
-		_delay_us(5);
+		_delay_us(FIVE_MS);
 		BCDSevSegment_Enable(SEG3_EN);
-		BCDSevSegment_DisplayNo(9);
+		BCDSevSegment_DisplayNo(NUM_9);
 		BCDSevSegment_Disable(SEG1_EN);
 		BCDSevSegment_Disable(SEG2_EN);
 		BCDSevSegment_Disable(SEG3_EN);
 		BCDSevSegment_Disable(SEG4_EN);
-		_delay_us(5);
+		_delay_us(FIVE_MS);
 		BCDSevSegment_Enable(SEG4_EN);
-		BCDSevSegment_DisplayNo(1);
+		BCDSevSegment_DisplayNo(NUM_1);
 		BCDSevSegment_Disable(SEG1_EN);
 		BCDSevSegment_Disable(SEG2_EN);
 		BCDSevSegment_Disable(SEG3_EN);
 		BCDSevSegment_Disable(SEG4_EN);
-		_delay_us(5); 
+		_delay_us(FIVE_MS); 
 		#endif
     }
 }

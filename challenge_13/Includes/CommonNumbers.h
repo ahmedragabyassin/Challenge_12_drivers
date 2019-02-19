@@ -18,6 +18,7 @@
 #define NUM_6					6
 #define NUM_7					7
 #define NUM_8					8
+#define NUM_9					9
 #define NUM_10					10
 #define NUM_11					11
 #define NUM_16					16
