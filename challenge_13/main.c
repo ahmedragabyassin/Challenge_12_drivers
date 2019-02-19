@@ -47,7 +47,7 @@ int main(void)
 		/************************************************************************/
 		/* Test Seven Segment and Keypad Drivers                                */
 		/************************************************************************/
-		#if 0
+		#if STOP_CODE
 		KeyPad_Init();
 		BCDSevSegment_Enable(SEG1_EN);
 		pressed_key = Scan_KeyPad();
